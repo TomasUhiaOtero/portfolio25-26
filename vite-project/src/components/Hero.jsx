@@ -69,7 +69,7 @@ function Hero() {
           >
             <a href="https://github.com/TomasUhiaOtero"  rel="noopener noreferrer" target='_blank'><FaGithub /></a>
             <a href="https://www.linkedin.com/in/tom%C3%A1s-uh%C3%ADa-otero-b10748345/"  rel="noopener noreferrer" target='_blank'><FaLinkedinIn /></a>
-            <a href="#"  rel="noopener noreferrer" target='_blank'><FaMailBulk /></a>
+            <a href="mailto:uhiaoterotomas@gmail.com"  rel="noopener noreferrer" target='_blank'><FaMailBulk /></a>
           </motion.div>
         </motion.div>
       </motion.div>

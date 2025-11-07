@@ -26,7 +26,7 @@ function Services() {
     {
       icon: '⚙️',
       title: 'Desarrollo Back-End',
-      description: 'Soluciones sólidas del lado del servidor con Node.js, Python o PHP, optimizando bases de datos y APIs.'
+      description: 'Soluciones sólidas del lado del servidor con Node.js, Python, JAVA o PHP, optimizando bases de datos y APIs.'
     },
   ];
 

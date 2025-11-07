@@ -4,17 +4,17 @@ import { FaGithub, FaLinkedinIn, FaMailBulk } from 'react-icons/fa';
 
 function Footer() {
   const navLinks = [
-    { href: '#inicio', text: 'Inicio' },
-    { href: '#sobre-mi', text: 'Sobre mí' },
-    { href: '#servicios', text: 'Servicios' },
+    { href: '#home', text: 'Inicio' },
+    { href: '#about', text: 'Sobre mí' },
+    { href: '#services', text: 'Servicios' },
     { href: '#portfolio', text: 'Portfolio' },
-    { href: '#contacto', text: 'Contacto' }
+    { href: '#contact', text: 'Contacto' }
   ];
 
   const socialLinks = [
-    { href: '#', icon: <FaGithub /> },
+    { href: 'https://github.com/TomasUhiaOtero', icon: <FaGithub /> },
     { href: '#', icon: <FaLinkedinIn /> },
-    { href: '#', icon: <FaMailBulk /> },
+    { href: 'mailto:uhiaoterotomas@gmail.com', icon: <FaMailBulk /> },
   ];
 
   const linkVariants = {
@@ -79,6 +79,8 @@ function Footer() {
               <motion.a
                 key={index}
                 href={social.href}
+                target='_blank'
+                rel="noopener noreferrer"
                 custom={index}
                 variants={linkVariants}
                 whileHover={{ scale: 1.2, y: -5 }}

@@ -36,9 +36,9 @@ function About() {
           <ScrollAnimation direction="left" delay={0.2}>
             <div className="about-image rounded-2xl overflow-hidden shadow-lg shrink-0">
               <img
-                src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                src="../public/florian-olivo-4hbJ-eymZ1o-unsplash.jpg"
                 alt="About Tomás"
-                className="w-[260px] sm:w-[320px] md:w-[380px] lg:w-[400px] object-cover mx-auto"
+                className="w-[260px] sm:w-[320px] md:w-[380px] lg:w-[400px] object-cover mx-auto hover:animate-pop"
               />
             </div>
           </ScrollAnimation>
@@ -63,7 +63,7 @@ function About() {
                 type="single"
                 collapsible
                 className="w-full mt-5"
-                defaultValue="item-1"
+                defaultValue="item-0"
               >
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="cursor-pointer">FRONT-END STACK</AccordionTrigger>
@@ -223,7 +223,7 @@ function About() {
 
 
               <motion.a
-                href="#"
+                href="../../public/TomasUhiaOteroResume.pdf" download
                 className="inline-block btn btn-primary mt-10"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

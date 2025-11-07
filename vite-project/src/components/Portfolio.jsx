@@ -1,67 +1,73 @@
 import { motion } from 'framer-motion'
 import ScrollAnimation from './ScrollAnimation'
+import { useState } from 'react';
 
 function Portfolio() {
+
+  const [selectedFilter, setSelectedFilter] = useState("Todos");
+
   const projects = [
     {
       id: 1,
-      category: 'Todos, Front-End, Back-end',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+      category: 'Todos, Front-End, Back-End',
+      image: '../../public/61shots_so.webp',
       title: 'Asistente-Estudio-IA',
       description: 'Crea tests, flashcards o resumenes interactivos a partir de OpenAPI.',
-      link: ""
+      link: "https://github.com/TomasUhiaOtero/Asistente-IA"
     },
     {
       id: 2,
-      category: 'Todos, Front-End, Back-end',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+      category: 'Todos, Front-End, Back-End',
+      image: '../../public/kairosmk2w.webp',
       title: 'Kairós',
       description: 'Web dedicada a la gestión de tareas y eventos utilizando APIs locales y externas.',
-      link: ""
+      link: "https://github.com/TomasUhiaOtero/Kairos"
     },
     {
       id: 3,
-      category: 'Todos, Front-End, Back-end',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80',
+      category: 'Todos, Front-End, Back-End',
+      image: "../../public/mockup_final_.webp",
       title: 'TopMusic',
       description: 'Web que muestra tops musicales y permite descubir nuevos generos musicales.',
-      link: ""
+      link: "https://github.com/TomasUhiaOtero/Proyecto-CSDAM"
     },
     {
       id: 4,
       category: 'Todos, Back-End',
-      image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80',
+      image: '../../public/7044158.webp',
       title: 'API REST Star Wars',
       description: 'Creación de la BBDD, Endpoints y pruebas con Postman',
-      link: ""
+      link: "https://github.com/TomasUhiaOtero/API-REST-StarWars"
     },
     {
       id: 5,
       category: 'Todos, Front-End',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+      image: '../../public/mk_portfolio_opt.webp',
       title: 'Este portfolio',
       description: '',
-      link: ""
+      link: "https://github.com/TomasUhiaOtero/portfolio25-26"
     },
     {
       id: 6,
       category: 'Todos, Front-End',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80',
+      image: '../../public/mockup_conversor.png',
       title: 'Conversor de Monedas',
       description: 'Design system for web applications',
-      link: ""
+      link: "https://github.com/TomasUhiaOtero/Conversor-monedas"
     },
     {
       id: 7,
       category: 'Todos, Front-End',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80',
+      image: '../../public/3_enraya_.webp',
       title: '3 en Raya Interactivo',
       description: 'Design system for web applications',
-      link: ""
+      link: "https://github.com/TomasUhiaOtero/Practice"
     },
   ];
 
   const filters = ['Todos', 'Front-End', 'Back-End'];
+
+  const filteredProjects = selectedFilter === "Todos" ? projects : projects.filter((p) => p.category.includes(selectedFilter));
 
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -84,26 +90,30 @@ function Portfolio() {
             <h2>Mi Portfolio</h2>
           </div>
         </ScrollAnimation>
-        
+
         <ScrollAnimation delay={0.2}>
           <div className="portfolio-filter">
             {filters.map((filter) => (
-              <button 
-                key={filter} 
-                className={`filter-btn ${filter === 'Todos' ? 'active' : ''}`} 
-                data-filter={filter}
+              <button
+                key={filter}
+                onClick={() => setSelectedFilter(filter)} // 👈 cambia el filtro
+                className={`filter-btn ${filter === selectedFilter ? "active" : ""
+                  }`}
               >
-                {filter.charAt(0).toUpperCase() + filter.slice(1)}
+                {filter}
               </button>
             ))}
           </div>
         </ScrollAnimation>
-        
+
         <div className="portfolio-grid">
-          {projects.map((project, index) => (
-            <motion.div
+          {filteredProjects.map((project, index) => (
+            <motion.a
               key={project.id}
-              className="portfolio-item"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-item cursor-pointer"
               data-category={project.category}
               custom={index}
               initial="hidden"
@@ -117,7 +127,7 @@ function Portfolio() {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </section>
