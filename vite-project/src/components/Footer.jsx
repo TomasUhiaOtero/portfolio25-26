@@ -13,7 +13,7 @@ function Footer() {
 
   const socialLinks = [
     { href: 'https://github.com/TomasUhiaOtero', icon: <FaGithub /> },
-    { href: '#', icon: <FaLinkedinIn /> },
+    { href: 'https://www.linkedin.com/in/tom%C3%A1s-uh%C3%ADa-otero-b10748345/', icon: <FaLinkedinIn /> },
     { href: 'mailto:uhiaoterotomas@gmail.com', icon: <FaMailBulk /> },
   ];
 

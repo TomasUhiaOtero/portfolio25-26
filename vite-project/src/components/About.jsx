@@ -36,7 +36,7 @@ function About() {
           <ScrollAnimation direction="left" delay={0.2}>
             <div className="about-image rounded-2xl overflow-hidden shadow-lg shrink-0">
               <img
-                src="../public/florian-olivo-4hbJ-eymZ1o-unsplash.jpg"
+                src="/florian-olivo-4hbJ-eymZ1o-unsplash.jpg"
                 alt="About Tomás"
                 className="w-[260px] sm:w-[320px] md:w-[380px] lg:w-[400px] object-cover mx-auto hover:animate-pop"
               />

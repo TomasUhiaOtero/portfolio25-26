@@ -10,7 +10,7 @@ function Portfolio() {
     {
       id: 1,
       category: 'Todos, Front-End, Back-End',
-      image: '../../public/61shots_so.webp',
+      image: '/61shots_so.webp',
       title: 'Asistente-Estudio-IA',
       description: 'Crea tests, flashcards o resumenes interactivos a partir de OpenAPI.',
       link: "https://github.com/TomasUhiaOtero/Asistente-IA"
@@ -18,7 +18,7 @@ function Portfolio() {
     {
       id: 2,
       category: 'Todos, Front-End, Back-End',
-      image: '../../public/kairosmk2w.webp',
+      image: '/kairosmk2w.webp',
       title: 'Kairós',
       description: 'Web dedicada a la gestión de tareas y eventos utilizando APIs locales y externas.',
       link: "https://github.com/TomasUhiaOtero/Kairos"
@@ -26,7 +26,7 @@ function Portfolio() {
     {
       id: 3,
       category: 'Todos, Front-End, Back-End',
-      image: "../../public/mockup_final_.webp",
+      image: "/mockup_final_.webp",
       title: 'TopMusic',
       description: 'Web que muestra tops musicales y permite descubir nuevos generos musicales.',
       link: "https://github.com/TomasUhiaOtero/Proyecto-CSDAM"
@@ -34,7 +34,7 @@ function Portfolio() {
     {
       id: 4,
       category: 'Todos, Back-End',
-      image: '../../public/7044158.webp',
+      image: '/7044158.webp',
       title: 'API REST Star Wars',
       description: 'Creación de la BBDD, Endpoints y pruebas con Postman',
       link: "https://github.com/TomasUhiaOtero/API-REST-StarWars"
@@ -42,7 +42,7 @@ function Portfolio() {
     {
       id: 5,
       category: 'Todos, Front-End',
-      image: '../../public/mk_portfolio_opt.webp',
+      image: '/mk_portfolio_opt.webp',
       title: 'Este portfolio',
       description: '',
       link: "https://github.com/TomasUhiaOtero/portfolio25-26"
@@ -50,7 +50,7 @@ function Portfolio() {
     {
       id: 6,
       category: 'Todos, Front-End',
-      image: '../../public/mockup_conversor.png',
+      image: '/mockup_conversor.png',
       title: 'Conversor de Monedas',
       description: 'Design system for web applications',
       link: "https://github.com/TomasUhiaOtero/Conversor-monedas"
@@ -58,7 +58,7 @@ function Portfolio() {
     {
       id: 7,
       category: 'Todos, Front-End',
-      image: '../../public/3_enraya_.webp',
+      image: '/3_enraya_.webp',
       title: '3 en Raya Interactivo',
       description: 'Design system for web applications',
       link: "https://github.com/TomasUhiaOtero/Practice"
