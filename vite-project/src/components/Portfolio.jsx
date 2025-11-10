@@ -52,7 +52,7 @@ function Portfolio() {
       category: 'Todos, Front-End',
       image: '/mockup_conversor.png',
       title: 'Conversor de Monedas',
-      description: 'Design system for web applications',
+      description: 'Aplicacion que usa una API externa para conversión de divisas',
       link: "https://github.com/TomasUhiaOtero/Conversor-monedas"
     },
     {
@@ -60,7 +60,7 @@ function Portfolio() {
       category: 'Todos, Front-End',
       image: '/3_enraya_.webp',
       title: '3 en Raya Interactivo',
-      description: 'Design system for web applications',
+      description: 'El Clásico juego de 3 en raya con JS y CSS',
       link: "https://github.com/TomasUhiaOtero/Practice"
     },
   ];
